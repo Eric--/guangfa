@@ -16,7 +16,7 @@ module.exports = {
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:8080',
       //刷新end
-      path.resolve(__dirname, 'js/entry.jsx')
+      path.resolve(__dirname, 'js/entry.jsx'  )
     ],
     vendor:[
         'react',
@@ -33,11 +33,11 @@ module.exports = {
     loaders: [{
       //.css 文件使用 style-loader 和 css-loader 来处理
       test: /\.css$/,
-      loader: 'style!css'
+      loader: 'style-loader!css-loader'
     }, {
       //.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
       test: /\.scss$/,
-      loader: 'style!css!sass?sourceMap'
+      loader: 'style-loader!css-loader!sass-loader?sourceMap'
     }, {
       //图片文件使用 url-loader 来处理，小于8kb的直接转为base64
       test: /\.(png|jpg)$/,
@@ -45,7 +45,7 @@ module.exports = {
     }, {
       //.js jsx 文件使用 babel-loader 来编译处理
       test: /\.js|jsx$/,
-      loader: 'babel',
+      loader: 'babel-loader',
       query: {
         presets: ['react', 'es2015']
       }
@@ -64,9 +64,9 @@ module.exports = {
   //其它解决方案配置
   resolve: {
     //查找module的话从这里开始查找
-    root: 'E:/github/nodes/webpack', //绝对路径
+  //  root: 'E:/github/nodes/webpack', //绝对路径
     //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
-    extensions: ['', '.js', 'jsx', '.json', '.scss'],
+    extensions: ['.js', 'jsx', '.json', '.scss'],
     //模块别名定义，方便后续直接引用别名，无须多写长长的地址
     alias: {
       AppStore: './js/stores/AppStores.js', //后续直接 require('AppStore') 即可

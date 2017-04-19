@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Hello extends React.Component {
 
@@ -37,8 +38,8 @@ Hello.defaultProps = {
 };
 
 Hello.propTypes = {
-    autoPlay: React.PropTypes.bool.isRequired,
-    maxLoops: React.PropTypes.number.isRequired
+    autoPlay: PropTypes.bool.isRequired,
+    maxLoops: PropTypes.number.isRequired
 };
 
 module.exports = Hello;
