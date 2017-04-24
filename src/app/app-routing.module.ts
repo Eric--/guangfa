@@ -1,15 +1,17 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { HeroesComponent }      from './hero/heroes.component';
-import { HeroDetailComponent }  from './hero/hero-detail.component';
+import { BusinessComponent } from './business/business.component';
+import { FlowComponent } from './flow_center/flow.component';
+import { QueryComponent } from './business/query.component';
+import { OtherComponent } from './business/other.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard',  component: DashboardComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'heroes',     component: HeroesComponent }
+  { path: '', redirectTo: '/business', pathMatch: 'full' },
+  { path: 'flowCenter',  component: FlowComponent },
+  { path: 'business', component: BusinessComponent },
+  { path: 'queryCenter',     component: QueryComponent },
+  { path: 'other',     component: OtherComponent }
 ];
 
 @NgModule({

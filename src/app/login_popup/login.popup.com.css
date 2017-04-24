@@ -1,0 +1,87 @@
+.popup {
+    position: absolute;
+    z-index: 10001;
+    top: 186px;
+    left: 50%;
+    width: 630px;
+    height: 412px;
+    background: #fff;
+    margin-left: -315px;
+}
+
+.popup .pop-bar {
+    height: 6px;
+    background: #2a98eb;
+}
+
+.popup .pop-title {
+    height: 48px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    line-height: 48px;
+}
+
+.popup .pop-title span {
+    font-size: 17px;
+    margin-left: 1em;
+    color: #484848;
+    font-weight: bold;
+}
+
+.popup .pop-title .close {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    margin-top: -9px;
+    height: 18px;
+    width: 18px;
+    background: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/img4.png');
+    background-position: -293px 0;
+}
+
+.popup .pop-content {
+    padding-top: 58px;
+    border-top: 1px solid #e7e7e7;
+}
+
+.popup .pop-content .input-name {
+    margin-bottom: 20px;
+}
+
+.popup .pop-content .input-pwd {
+    margin-bottom: 54px;
+}
+
+.popup .pop-content label {
+    width: 215px;
+    text-align: right;
+    font-size: 15px;
+    color: #484848;
+    font-weight: bold;
+}
+
+.popup .pop-content input {
+    height: 40px;
+    width: 300px;
+    border: 1px solid #eee;
+    padding-left: 8px;
+}
+
+.popup .pop-content .input-submit {
+    padding-left: 215px;
+}
+
+.popup .pop-content .input-submit button {
+    height: 42px;
+    width: 132px;
+    margin-right: 16px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.popup .pop-content .input-submit button.btn-cancel {
+    height: 42px;
+    border: 1px solid #cacaca;
+    background: #fff;
+    color: #484848;
+}

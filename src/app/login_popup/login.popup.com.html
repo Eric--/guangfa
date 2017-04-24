@@ -1,0 +1,21 @@
+<div class="popup" [hidden]="!show">
+	<div class="pop-bar"></div>
+	<div class="pop-title">
+		<span>操作员登录</span>
+		<div class="close" (click)="hide($event)"></div>
+	</div>
+	<div class="pop-content">
+		<div class="input-name">
+			<label>请输入操作员号：</label><input
+			 type="text" name="account" [(ngModel)]="account"> 
+		</div>
+		<div class="input-pwd">
+			<label>请输入密码：</label><input
+			 type="password" name="password" [(ngModel)]="password">
+		</div>
+		<div class="input-submit">
+			<button class="btn btn-default btn-cancel" (click)="hide($event)">取消</button><button class="btn btn-primary" 
+			 (click)="userLogin()">确定</button>
+		</div>
+	</div>
+</div>

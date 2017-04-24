@@ -1,0 +1,55 @@
+ .top {
+     height: 100px;
+     padding-top: 32px;
+ }
+ 
+ .top .input-search {
+     margin-left: 20px;
+     display: inline-block;
+ }
+ 
+ .top .input-search input {
+     width: 400px;
+     background-color: #edf1f3;
+     border: none;
+     height: 34px;
+     padding: 0 17px;
+     border-radius: 17px;
+     background-image: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/search-bg.png');
+     background-repeat: no-repeat;
+     background-position: 20px 8px;
+ }
+ 
+ .top .input-search input.act {
+     background-image: none;
+ }
+ 
+ .top .login-area {
+     float: right;
+     margin-right: 30px;
+     margin-top: 4px;
+     font-size: 14px;
+ }
+
+ .top .login-area a{
+     cursor: pointer;
+ }
+ 
+ .top .login-area .login-btn a {
+     text-decoration: underline;
+     font-weight: bold;
+ }
+ 
+ .top .login-area .welcome {
+     vertical-align: middle;
+ }
+ 
+ .top .login-area .logout-btn {
+     background: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/img4.png');
+     display: inline-block;
+     width: 21px;
+     height: 21px;
+     vertical-align: middle;
+     background-position: -318px 0;
+     margin-left: 12px;
+ }

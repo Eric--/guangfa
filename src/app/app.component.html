@@ -1,0 +1,16 @@
+<div class="container container-xl">
+
+    <nav-bar></nav-bar>
+
+    <div class="page-right">
+
+        <top-bar [loginStatus]="loginStatus" [userName]="userName" (postMessage)="topbarHandler($event)"></top-bar>
+
+		<router-outlet></router-outlet>
+		
+    </div>
+</div>
+
+<login-popup [show]="loginPopupShow" (postMessage)="loginPopupHandler($event)"></login-popup>
+
+<div class="overlay" [hidden]="layerHidden"></div>

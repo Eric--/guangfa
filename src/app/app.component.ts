@@ -1,19 +1,41 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit, OnChanges} from '@angular/core';
 
 @Component({
-	selector: 'my-app',
-	template: `
-	  <h1>{{title}}</h1>
-	  <nav>
-	    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-	    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-	  </nav>
-	  <router-outlet></router-outlet>
-	`,
+	selector: 'system-app',
+	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css']
 })
 
-export class AppComponent{
-	title: string = 'Tour of Heroes';
+export class AppComponent implements OnInit, OnChanges{
+
+	layerHidden:boolean = true;
+	loginPopupShow:boolean = false;
+	loginStatus:boolean = false;
+	userName:string = '';
+
+	topbarHandler({type}: {type:string}){
+		if(type == 'login'){
+			this.loginPopupShow = true;
+			this.layerHidden = false;
+		}else{
+			this.userName = '';
+			this.loginStatus = false;
+		}
+	}	 
+
+	loginPopupHandler({show, userName}: {show:boolean,userName:string}){
+		this.loginPopupShow = show;
+		this.layerHidden = !show;
+		if(userName){
+			this.userName = userName;
+			this.loginStatus = true;
+		}
+	}
+
+	ngOnInit(){
+	}
+
+	ngOnChanges() {
+	}
 }

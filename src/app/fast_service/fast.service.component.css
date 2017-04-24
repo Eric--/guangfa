@@ -1,0 +1,83 @@
+.fast-service {
+    min-height: 354px;
+    background: #eef0f6;
+    padding-top: 40px;
+}
+
+.fast-service .container-service .col-cus {
+    float: left;
+    width: 200px;
+    height: 90px;
+    position: relative;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.fast-service .container-service .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    background: #f3f5fa;
+    padding: 24px 12px;
+}
+
+.fast-service .container-service .left div {
+    margin-top: 4px;
+    height: 100%;
+    background: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/img4.png');
+}
+
+.fast-service .container-service .left .icon1 {
+    background-position: -632px 0;
+}
+
+.fast-service .container-service .left .icon2 {
+    background-position: -390px 0;
+}
+
+.fast-service .container-service .left .icon3 {
+    background-position: -682px 0;
+}
+
+.fast-service .container-service .left .icon4 {
+    background-position: -578px 0;
+}
+
+.fast-service .container-service .left .icon5 {
+    background-position: -482px 0;
+}
+
+.fast-service .container-service .left .icon6 {
+    background-position: -342px 0;
+}
+
+.fast-service .container-service .left .icon7 {
+    background-position: -734px 0;
+}
+
+.fast-service .container-service .left .icon8 {
+    background-position: -530px 0;
+}
+
+.fast-service .container-service .left .icon9 {
+    background-position: -434px 0;
+}
+
+.fast-service .container-service .left .icon10 {
+    background-position: -790px 0;
+}
+
+.fast-service .container-service .right {
+    margin-left: 70px;
+    background: #fff;
+    height: 100%;
+    padding-top: 34px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.fast-service .container-service .right-long {
+    padding-top: 20px;
+}

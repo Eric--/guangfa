@@ -1,0 +1,39 @@
+ .other-business {
+     background: #e7e9f0;
+     padding-top: 30px;
+ }
+ 
+ .other-business .container-service .col-cus {
+     float: left;
+     width: 550px;
+     height: 58px;
+     position: relative;
+     margin-bottom: 20px;
+     margin-right: 20px;
+     background: #fff;
+     padding-top: 18px;
+     padding-left: 20px;
+ }
+ 
+ .other-business .container-service .col-cus .item-sel {
+     position: absolute;
+     width: 5px;
+     top: 0;
+     left: 0;
+     height: 100%;
+     background: #9da5be;
+ }
+ 
+ .other-business .container-service .col-cus .item-tit {
+     font-size: 16px;
+     color: #3d82cf;
+     display: inline-block;
+ }
+ 
+ .other-business .container-service .col-cus .item-des {
+     color: #999;
+     font-size: 12px;
+     float: right;
+     margin-top: 3px;
+     margin-right: 20px;
+ }

@@ -1,0 +1,9 @@
+<div class="top">
+    <div class="input-search">
+        <input type="text" name="">
+    </div>
+    <div class="login-area">
+        <span class="welcome">欢迎您，<span class="login-btn" [hidden]="loginStatus">请<a (click)="userLogin()">登录</a></span><span class="user-name" [hidden]="!loginStatus">{{userName}}</span></span>
+        <a class="logout-btn" [hidden]="!loginStatus" (click)="userLogout()"></a>
+    </div>
+</div>
