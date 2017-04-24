@@ -10,10 +10,6 @@ module.exports = {
     //页面入口文件配置
     entry: {
         app: [
-            //刷新start
-           // 'webpack/hot/dev-server',
-           // 'webpack-dev-server/client?http://localhost:8080',
-            //刷新end
             helpers.root('src', 'app/app.ts')
         ],
         vendor: helpers.root('src', 'js/vendor.ts'),
