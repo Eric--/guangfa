@@ -1,6 +1,9 @@
 
 import { Component, OnInit, OnChanges} from '@angular/core';
 
+import { CookieService } from './service/cookie.service'; 
+
+
 @Component({
 	selector: 'system-app',
 	templateUrl: './app.component.html',
@@ -13,6 +16,10 @@ export class AppComponent implements OnInit, OnChanges{
 	loginPopupShow:boolean = false;
 	loginStatus:boolean = false;
 	userName:string = '';
+
+	constructor(
+		private cookieService: CookieService 
+	){}
 
 	topbarHandler({type}: {type:string}){
 		if(type == 'login'){
@@ -34,6 +41,14 @@ export class AppComponent implements OnInit, OnChanges{
 	}
 
 	ngOnInit(){
+		var userName = this.cookieService.getCookie('sys_username');
+		if(userName){
+			this.userName = userName;
+			this.loginStatus = true;
+		}else{
+			this.loginPopupShow = true;
+			this.layerHidden = false;
+		}
 	}
 
 	ngOnChanges() {

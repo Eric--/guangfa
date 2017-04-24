@@ -20,6 +20,8 @@ import { OtherComponent } from './business/other.component';
 
 import { AppRoutingModule }  from './app-routing.module';
 import { WebWorker } from './flow_center/web.work';
+import { CookieService } from './service/cookie.service';
+
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { WebWorker } from './flow_center/web.work';
       OtherComponent
 	],
   providers: [
-      WebWorker
+      WebWorker,
+      CookieService
   ],
   bootstrap:    [ AppComponent ]
 })
