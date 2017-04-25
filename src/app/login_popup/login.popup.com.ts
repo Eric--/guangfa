@@ -15,6 +15,8 @@ export class LoginPopupComponent implements OnInit{
 	@Output() postMessage:EventEmitter<object> = new EventEmitter();
 	account:string;
 	password:string;
+	errorShow:boolean = false;
+	errorMsg:string;
 
 	private loginUrl = 'http://www.bitonair.com/app/user/';
 
@@ -48,6 +50,11 @@ export class LoginPopupComponent implements OnInit{
 						if(result && result.status == 0){
 							//登录成功
 							this.postMessage.emit({show: false, userName: this.account});
+							this.errorMsg = '';
+							this.errorShow = false;
+						}else{
+							this.errorShow = true;
+							this.errorMsg = result.data;
 						}
 					})
 					.catch(this.handleError);
@@ -58,6 +65,8 @@ export class LoginPopupComponent implements OnInit{
 
 	handleError(error: any){
 		console.log(error);
+		this.errorMsg = "用户名或密码错误";
+		this.errorShow = true;
 	}
 
 }

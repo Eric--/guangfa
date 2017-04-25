@@ -5,6 +5,7 @@
 		<div class="close" (click)="hide($event)"></div>
 	</div>
 	<div class="pop-content">
+		<div class="input-error" [hidden]="!errorShow">{{errorMsg}}</div>
 		<div class="input-name">
 			<label>请输入操作员号：</label><input
 			 type="text" name="account" [(ngModel)]="account"> 
