@@ -4,6 +4,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var helpers = require('./helpers');
 
 module.exports = {
@@ -42,15 +43,6 @@ module.exports = {
                 presets: ['react', 'es2015']
             }
         }, {
-            //tsx typescript 用来编译ng的
-            test: /\.tsx?$/,
-            use: [
-                {
-                  loader: 'awesome-typescript-loader',
-                  options: { configFileName: helpers.root('tsconfig.json') }
-                } , 'angular2-template-loader'
-            ]
-        }, {
             // support for .html as raw text
             test: /\.html$/,
             loader: 'raw-loader'
@@ -68,12 +60,17 @@ module.exports = {
         ),
 
         new webpack.optimize.CommonsChunkPlugin({
+          minChunks: Infinity,
           name: ['app', 'vendor', 'polyfills']
         }),
 
         new HtmlWebpackPlugin({
-          template: 'src/index.html'
-        })
+          filename: 'index.html',
+          template: 'src/index.html',
+          inject: true
+        }),
+
+        new BundleAnalyzerPlugin()
     ],
     //其它解决方案配置
     resolve: {

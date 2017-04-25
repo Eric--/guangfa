@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import { Headers, Http, RequestOptions, RequestOptionsArgs, URLSearchParams } from '@angular/http';
 
+import 'rxjs/add/operator/toPromise';
+
 @Component({
 	selector: 'login-popup',
 	templateUrl: './login.popup.com.html',

@@ -7,3 +7,7 @@
 * 将界面组件化到scaffold中去
 * 消息推送已经完成，采用websocket方式推送
 * 解决登录，本地跨域无法演示的问题
+* --display-modules --sort-modules-by size
+* "@angular/compiler": "~4.0.0"
+* tree shake
+* aot 

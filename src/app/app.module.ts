@@ -1,5 +1,5 @@
-import 'zone.js';
-import 'reflect-metadata';
+// import 'zone.js';
+// import 'reflect-metadata';
 
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

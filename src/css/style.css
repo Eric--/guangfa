@@ -41,3 +41,9 @@ input:focus {
     width: 212px;
     margin:100px auto 0 auto;
 }
+
+@media (min-width: 1200px) {
+    .page-right .content .container-service {
+        width: 1198px;
+    }
+}
