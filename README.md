@@ -11,3 +11,12 @@
 * "@angular/compiler": "~4.0.0"
 * tree shake
 * aot 
+### 启动
+* 本地使用
+```
+  npm run dev
+```
+* aot 部署
+```
+  npm run aot
+```
