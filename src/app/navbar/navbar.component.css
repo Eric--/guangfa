@@ -18,6 +18,7 @@
     height: 44px;
     margin: auto;
     background: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/img4.png');
+    /*background: url(../img/logo1.png);*/
 }
 
 .system-nav li {
@@ -63,19 +64,23 @@
 
 .system-nav .icon1 {
     background-position: -965px 0;
+    /*background-image: url(../img/flow-icon.png);*/
 }
 
 .system-nav .icon2 {
     background-position: -936px -30px;
     height: 24px;
+    /*background-image: url(../img/business-icon.png);*/
 }
 
 .system-nav li.act .icon2 {
     background-position: -934px 0;
+    /*background-image: url(../img/business-act-icon.png);*/
 }
 
 .system-nav .icon4 {
     background-position: -903px 0;
+    /*background-image: url(../img/other-icon.png);*/
 }
 
 .system-nav .txt {
