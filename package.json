@@ -9,12 +9,13 @@
     "build_prod": "npm run build && browserify -s app dist/app.js > dist/bundle.js && npm run minify",
     "minify": "uglifyjs dist/bundle.js --screw-ie8 --compress --mangle --output dist/bundle.min.js",
     "gzip": "gzip dist/bundle.min.js",
-    "server": "set NODE_ENV=dev && webpack-dev-server --port 8080 -d --open --progress --colors --profile --watch --content-base src/",
-    "dev": "set NODE_ENV=dev && webpack -d --colors --profile --display-error-details",
-    "dev:aot": "set NODE_ENV=aot && webpack -d --colors --profile --display-error-details",
-    "pro": "set NODE_ENV=pro && webpack -p --colors --profile",
-    "pro:aot": "set NODE_ENV=aot && webpack -p --colors --profile",
-    "build": "npm run clean && npm run pro:aot"
+    "aot:ngc": "node_modules/.bin/ngc -p tsconfig.aot.json",
+    
+    "server": "set NODE_ENV=dev&& webpack-dev-server --port 8080 -d --open --progress --colors --profile --watch --content-base src/",
+    "server:aot": "set NODE_ENV=pro&& webpack-dev-server --port 8080 -d --open --progress --colors --profile --watch --content-base src/",
+    "dev": "set NODE_ENV=dev&& webpack -d --colors --profile --display-error-details",
+    "pro": "set NODE_ENV=pro&& webpack -p --colors --profile",
+    "build": "npm run clean && npm run pro"
   },
   "repository": {
     "type": "git",

@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { BusinessComponent } from './business/business.component';
 import { FlowComponent } from './flow_center/flow.component';
-import { QueryComponent } from './business/query.component';
-import { OtherComponent } from './business/other.component';
+import { QueryComponent } from './query_com/query.component';
+import { OtherComponent } from './other_com/other.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/business', pathMatch: 'full' },

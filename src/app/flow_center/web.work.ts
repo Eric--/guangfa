@@ -12,7 +12,7 @@ export class WebWorker {
 		this.postMessage = new EventEmitter();
 		if(typeof(Worker)!=="undefined"){
 
-			var _this = this;
+			let _this = this;
 			this.employee = new Worker('app/flow_center/work.script.js');
 			this.employee.onmessage=function(event){
 				

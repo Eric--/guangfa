@@ -2,13 +2,13 @@
     <div class="title">快捷服务</div>
     <div class="container container-service">
         <div class="row row-cus">
-            <div class="col-cus">
+            <div *ngFor="let item of serviceItems" class="col-cus">
                 <div class="left">
-                    <div class="icon1"></div>
+                    <div class="{{item.className}}"></div>
                 </div>
-                <div class="right">一站式开户</div>
+                <div class="right"><p>{{item.name}}</p></div>
             </div>
-            <div class="col-cus">
+          <!--  <div class="col-cus">
                 <div class="left">
                     <div class="icon2"></div>
                 </div>
@@ -42,8 +42,7 @@
                 <div class="left">
                     <div class="icon7"></div>
                 </div>
-                <div class="right right-long">账户注册
-                    <br/>资料变更</div>
+                <div class="right right-long">账户注册资料变更</div>
             </div>
             <div class="col-cus">
                 <div class="left">
@@ -62,7 +61,7 @@
                     <div class="icon10"></div>
                 </div>
                 <div class="right">转托管</div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

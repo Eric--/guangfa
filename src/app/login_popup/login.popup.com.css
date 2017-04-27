@@ -1,12 +1,17 @@
 .popup {
-    position: absolute;
+    position: fixed;
     z-index: 10001;
-    top: 186px;
+    top: 50%;
     left: 50%;
     width: 630px;
     height: 412px;
     background: #fff;
     margin-left: -315px;
+    margin-top: -206px;
+}
+
+.popup[hidden]{
+    display: none !important;
 }
 
 .popup .pop-bar {

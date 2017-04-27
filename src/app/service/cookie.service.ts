@@ -10,7 +10,7 @@ export class CookieService {
 
 	getCookie(key: string){
 
-		var arr, reg = new RegExp("(^| )" + key + "=([^;]*)(;|$)");
+		let arr, reg = new RegExp("(^| )" + key + "=([^;]*)(;|$)");
 		if (arr = document.cookie.match(reg))
 		    return decodeURIComponent(arr[2]);
 		else

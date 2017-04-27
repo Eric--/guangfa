@@ -5,7 +5,6 @@ import { Component, OnInit } from '@angular/core';
 	template: `
 		<div class="content">
 		    <fast-service></fast-service>
-
 		    <other-service></other-service>
 		</div>
 	`

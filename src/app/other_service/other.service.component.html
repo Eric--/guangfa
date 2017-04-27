@@ -2,12 +2,12 @@
     <div class="title">其他</div>
     <div class="container container-service">
         <div class="row row-cus">
-            <div class="col-cus">
+            <div *ngFor="let item of serviceItems" class="col-cus">
                 <div class="item-sel"></div>
-                <div class="item-tit">客户信息管理</div>
-                <div class="item-des">客户身份信息，联系信息，其他信息和邮寄信息的维护</div>
+                <div class="item-tit">{{item.name}}</div>
+                <div class="item-des">{{item.desc}}</div>
             </div>
-            <div class="col-cus">
+        <!--    <div class="col-cus">
                 <div class="item-sel"></div>
                 <div class="item-tit">基金账户管理</div>
                 <div class="item-des">基金账户信息变更和维护</div>
@@ -41,7 +41,7 @@
                 <div class="item-sel"></div>
                 <div class="item-tit">融资融券</div>
                 <div class="item-des">客户合同信息管理与维护</div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

@@ -19,6 +19,10 @@ input:focus {
     margin-left: 200px;
 }
 
+.page-right .content {
+    padding-top: 100px;
+}
+
 .page-right .content .title {
     margin-left: 30px;
     font-size: 20px;
@@ -35,12 +39,13 @@ input:focus {
     margin-right: 0;
 }
 
-.page-right .content .art-word{
-    font:italic bold 50px arial,sans-serif;
+.page-right .content .art-word {
+    font: italic bold 50px arial, sans-serif;
     color: #ccc;
     width: 212px;
-    margin:100px auto 0 auto;
+    margin: 100px auto 0 auto;
 }
+
 
 @media (min-width: 1200px) {
     .page-right .content .container-service {

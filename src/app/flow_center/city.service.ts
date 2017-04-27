@@ -1,6 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
-import { CITYS } from './mock.citys';
 import { City } from './city';
 import { WebWorker } from './web.work';
 
@@ -21,10 +20,5 @@ export class CityService {
 			this.postMessage.emit(city);
 		});
 	}
-
-	getCitys(): City[]{
-		
-		// this.postMessage.emit(new City("changan", "yichun"));
-		return CITYS;	
-	}
+	
 }

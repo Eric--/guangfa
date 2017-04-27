@@ -38,7 +38,7 @@ export class TopbarComponent implements OnInit{
 				this.http.get(this.loginUrl + "logout", params)
 							.toPromise()
 							.then(response => {
-								var result = response.json();
+								let result = response.json();
 								console.log(result);
 								if(result && result.status == 0){
 									//退出成功

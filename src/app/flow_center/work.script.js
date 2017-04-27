@@ -1,6 +1,6 @@
 
 
-var ws = new WebSocket("ws://www.bitonair.com:8181");
+let ws = new WebSocket("ws://www.bitonair.com:8181");
 
 ws.onopen = function (e) {
 

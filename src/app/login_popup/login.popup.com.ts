@@ -30,9 +30,9 @@ export class LoginPopupComponent implements OnInit{
 
 	userLogin(){
 		//post
-		let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
+		let headers = new Headers({ 'Content-Type': 'application/multipart/form-data'});
 		let options = new RequestOptions({ headers: headers });
-		var body = "username=" + this.account + "&password=" + this.password;
+		let body = "username=" + this.account + "&password=" + this.password;
 
 		//get
 		// let urlSearchParams = new URLSearchParams();
@@ -45,7 +45,7 @@ export class LoginPopupComponent implements OnInit{
 		this.http.post(this.loginUrl + "login", body, options)
 					.toPromise()
 					.then(response => {
-						var result = response.json();
+						let result = response.json();
 						console.log(result);
 						if(result && result.status == 0){
 							//登录成功

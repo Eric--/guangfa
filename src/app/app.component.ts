@@ -41,7 +41,7 @@ export class AppComponent implements OnInit, OnChanges{
 	}
 
 	ngOnInit(){
-		var userName = this.cookieService.getCookie('sys_username');
+		let userName = this.cookieService.getCookie('sys_username');
 		if(userName){
 			this.userName = userName;
 			this.loginStatus = true;

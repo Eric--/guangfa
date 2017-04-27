@@ -2,6 +2,7 @@ import { Component, OnInit, NgZone, OnDestroy } from '@angular/core';
 
 import { CityService } from './city.service';
 import { City } from './city';
+import { DataService } from '../service/data.service'; 
 
 
 @Component({
@@ -26,6 +27,7 @@ export class FlowComponent implements OnInit, OnDestroy{
 
 		constructor(
 			private cityService: CityService,
+			private dataService: DataService,
 			private _ngzone: NgZone
 		){
 			this.cityService.postMessage.subscribe((city: City)=>{
@@ -51,10 +53,10 @@ export class FlowComponent implements OnInit, OnDestroy{
 				if(strCitys){
 					this.citys = JSON.parse(strCitys);
 				}else{
-					this.citys = this.cityService.getCitys();	
+					this.citys = this.dataService.getCitys();	
 				}
 			}else{
-				this.citys = this.citys.concat(this.cityService.getCitys());
+				this.citys = this.citys.concat(this.dataService.getCitys());
 			}
 		}
 
