@@ -15,7 +15,9 @@
     "server:aot": "set NODE_ENV=pro&& webpack-dev-server --port 8080 -d --open --progress --colors --profile --watch --content-base src/",
     "dev": "set NODE_ENV=dev&& webpack -d --colors --profile --display-error-details",
     "pro": "set NODE_ENV=pro&& webpack -p --colors --profile",
-    "build": "npm run clean && npm run pro"
+    "pro:abs": "set NODE_ENV=pro&&set NODE_ABS=abs&& webpack -p --colors --profile",
+    "build": "npm run clean && npm run pro",
+    "build:abs": "npm run clean && npm run pro:abs"
   },
   "repository": {
     "type": "git",

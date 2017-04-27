@@ -7,6 +7,11 @@ let ngtools = require('@ngtools/webpack');
 let commonConfig = require('./webpack.config.com.js');
 let helpers = require('./helpers');
 
+let relPath = './lib/', publicPath = '';
+if(process.env.NODE_ABS){//设置打包路径
+    relPath = '';publicPath = '/';
+}
+
 
 module.exports = webpackMerge(commonConfig, {
 
@@ -20,10 +25,10 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     output: {
-      path: helpers.root('dist'),
-      publicPath: '/',
-      filename: '[name].[hash].js',
-      chunkFilename: '[id].[hash].chunk.js'
+      path: helpers.root('dist'),// path+filename js package path
+      publicPath: publicPath,//inject html use relative path or absolute path
+      filename: relPath + '[name].[hash].js',
+      chunkFilename: relPath + '[id].[hash].chunk.js'
     },
 
     module: {
