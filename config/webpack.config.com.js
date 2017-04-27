@@ -1,21 +1,14 @@
 
 //'use strict';
 
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-var helpers = require('./helpers');
+let webpack = require('webpack');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+let helpers = require('./helpers');
 
 module.exports = {
-    //页面入口文件配置
-    entry: {
-        app: [
-            helpers.root('src', 'app/app.ts')
-        ],
-        vendor: helpers.root('src', 'js/vendor.ts'),
-        polyfills: helpers.root('src', 'js/polyfills.ts')
-    },
+
     module: {
         //加载器配置
         rules: [{

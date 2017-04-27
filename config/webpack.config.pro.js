@@ -3,11 +3,11 @@
 
 //'use strict';
 
-var webpack = require('webpack');
-var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var commonConfig = require('./webpack.common.js');
-var helpers = require('./helpers');
+let webpack = require('webpack');
+let webpackMerge = require('webpack-merge');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let commonConfig = require('./webpack.common.js');
+let helpers = require('./helpers');
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-source-map',

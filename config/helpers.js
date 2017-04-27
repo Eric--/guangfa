@@ -1,6 +1,6 @@
-var path = require('path');
+let path = require('path');
 
-var _root = path.resolve(__dirname, '..');
+let _root = path.resolve(__dirname, '..');
 
 function root(args) {
     args = Array.prototype.slice.call(arguments, 0);
