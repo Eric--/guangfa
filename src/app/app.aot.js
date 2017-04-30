@@ -1,4 +1,5 @@
 import { platformBrowser } from '@angular/platform-browser';
-import { AppModule } from './app.module';
-platformBrowser().bootstrapModule(AppModule);
+import { AppModuleNgFactory } from '../../aot/src/app/app.module.ngfactory';
+// import { AppModule } from './app.module';
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
 //# sourceMappingURL=app.aot.js.map

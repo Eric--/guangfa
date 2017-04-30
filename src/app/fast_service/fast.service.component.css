@@ -27,47 +27,58 @@
 .fast-service .container-service .left div {
     margin-top: 4px;
     height: 100%;
-    background: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/img4.png');
+    /*background: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/img4.png');*/
+    background-repeat: no-repeat;
 }
 
 .fast-service .container-service .left .icon1 {
-    background-position: -632px 0;
+    /*background-position: -632px 0;*/
+    background-image: url('../img/icon2.png');
 }
 
 .fast-service .container-service .left .icon2 {
-    background-position: -390px 0;
+    /*background-position: -390px 0;*/
+    background-image: url('../img/icon7.png');
 }
 
 .fast-service .container-service .left .icon3 {
-    background-position: -682px 0;
+    /*background-position: -682px 0;*/
+    background-image: url('../img/icon8.png');
 }
 
 .fast-service .container-service .left .icon4 {
-    background-position: -578px 0;
+    /*background-position: -578px 0;*/
+    background-image: url('../img/icon5.png');
 }
 
 .fast-service .container-service .left .icon5 {
-    background-position: -482px 0;
+    /*background-position: -482px 0;*/
+    background-image: url('../img/icon4.png');
 }
 
 .fast-service .container-service .left .icon6 {
-    background-position: -342px 0;
+    /*background-position: -342px 0;*/
+    background-image: url('../img/icon1.png');
 }
 
 .fast-service .container-service .left .icon7 {
-    background-position: -734px 0;
+    /*background-position: -734px 0;*/
+    background-image: url('../img/icon10.png');
 }
 
 .fast-service .container-service .left .icon8 {
-    background-position: -530px 0;
+    /*background-position: -530px 0;*/
+    background-image: url('../img/icon9.png');
 }
 
 .fast-service .container-service .left .icon9 {
-    background-position: -434px 0;
+    /*background-position: -434px 0;*/
+    background-image: url('../img/icon6.png');
 }
 
 .fast-service .container-service .left .icon10 {
-    background-position: -790px 0;
+    /*background-position: -790px 0;*/
+    background-image: url('../img/icon3.png');
 }
 
 .fast-service .container-service .right {

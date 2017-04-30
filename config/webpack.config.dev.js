@@ -1,4 +1,3 @@
-
 //'use strict';
 
 let webpackMerge = require('webpack-merge');
@@ -18,27 +17,23 @@ module.exports = webpackMerge(commonConfig, {
 
     output: {
         path: helpers.root('dist'),
-        publicPath: '/',
+        publicPath: '',
         filename: '[name].js',
         chunkFilename: '[id].chunk.js'
     },
 
     module: {
         rules: [{
-                //tsx typescript 用来编译ng的
-                test: /\.tsx?$/,
-                use: [
-                    {
-                      loader: 'awesome-typescript-loader?sourceMap',
-                      options: { configFileName: helpers.root('tsconfig.json') }
-                    } , 'angular2-template-loader?sourceMap', 'source-map-loader'
-                ]
-            }]
+            //tsx typescript 用来编译ng的
+            test: /\.tsx?$/,
+            use: [{
+                loader: 'awesome-typescript-loader?sourceMap',
+                options: { configFileName: helpers.root('tsconfig.json') }
+            }, 'angular2-template-loader?sourceMap', 'source-map-loader']
+        }]
     },
 
-    plugins: [
-        new ExtractTextPlugin('[name].css')
-    ],
+    plugins: [],
 
     devServer: {
         historyApiFallback: true,

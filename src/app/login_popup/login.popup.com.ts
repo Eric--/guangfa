@@ -24,11 +24,11 @@ export class LoginPopupComponent implements OnInit{
 		private http: Http
 	){}
 
-	hide(){
+	hide($event: any){
 		this.postMessage.emit({show: false});
 	}
 
-	userLogin(){
+	userLogin($event: any){
 		//post
 		let headers = new Headers({ 'Content-Type': 'application/multipart/form-data'});
 		let options = new RequestOptions({ headers: headers });
@@ -46,7 +46,6 @@ export class LoginPopupComponent implements OnInit{
 					.toPromise()
 					.then(response => {
 						let result = response.json();
-						console.log(result);
 						if(result && result.status == 0){
 							//登录成功
 							this.postMessage.emit({show: false, userName: this.account});
@@ -64,7 +63,6 @@ export class LoginPopupComponent implements OnInit{
 	}
 
 	handleError(error: any){
-		console.log(error);
 		this.errorMsg = "用户名或密码错误";
 		this.errorShow = true;
 	}

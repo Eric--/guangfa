@@ -17,10 +17,10 @@ var LoginPopupComponent = (function () {
         this.errorShow = false;
         this.loginUrl = 'http://www.bitonair.com/app/user/';
     }
-    LoginPopupComponent.prototype.hide = function () {
+    LoginPopupComponent.prototype.hide = function ($event) {
         this.postMessage.emit({ show: false });
     };
-    LoginPopupComponent.prototype.userLogin = function () {
+    LoginPopupComponent.prototype.userLogin = function ($event) {
         var _this = this;
         //post
         var headers = new Headers({ 'Content-Type': 'application/multipart/form-data' });
@@ -37,7 +37,6 @@ var LoginPopupComponent = (function () {
             .toPromise()
             .then(function (response) {
             var result = response.json();
-            console.log(result);
             if (result && result.status == 0) {
                 //登录成功
                 _this.postMessage.emit({ show: false, userName: _this.account });
@@ -54,7 +53,6 @@ var LoginPopupComponent = (function () {
     LoginPopupComponent.prototype.ngOnInit = function () {
     };
     LoginPopupComponent.prototype.handleError = function (error) {
-        console.log(error);
         this.errorMsg = "用户名或密码错误";
         this.errorShow = true;
     };

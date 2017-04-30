@@ -1,0 +1,54 @@
+html, body {
+    font-family: "Microsoft YaHei", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    height: 100%;   
+}
+
+input:focus {
+    outline: none;
+}
+
+.container-xl {
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    background: url('http://7u2q5h.com1.z0.glb.clouddn.com/image/guangfa/container-bak.jpg');
+}
+
+.page-right {
+    position: relative;
+    margin-left: 200px;
+}
+
+.page-right .content {
+    padding-top: 100px;
+}
+
+.page-right .content .title {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.page-right .content .container-service {
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.page-right .content .row-cus {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.page-right .content .art-word {
+    font: italic bold 50px arial, sans-serif;
+    color: #ccc;
+    width: 212px;
+    margin: 100px auto 0 auto;
+}
+
+
+@media (min-width: 1200px) {
+    .page-right .content .container-service {
+        width: 1198px;
+    }
+}

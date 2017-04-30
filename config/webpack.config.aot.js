@@ -4,6 +4,7 @@ let webpackMerge = require('webpack-merge');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let CompressionPlugin = require("compression-webpack-plugin");
 let ngtools = require('@ngtools/webpack');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let commonConfig = require('./webpack.config.com.js');
 let helpers = require('./helpers');
 
@@ -38,6 +39,11 @@ module.exports = webpackMerge(commonConfig, {
                 use: [
                     '@ngtools/webpack'
                 ]
+            },{
+                //将样式抽取出来为独立的文件
+                test: /\.css$/,
+                exclude: helpers.root('src', 'app'),
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
             }
         ]
     },
@@ -57,22 +63,12 @@ module.exports = webpackMerge(commonConfig, {
             minRatio: 0.3
         }),
 
-        new webpack.optimize.UglifyJsPlugin({
-          mangle: {
-            keep_fnames: true
-          },
-          output: {
-            comments: false
-          },
-          compress: {
-            warnings: false
-          }
-        }),
-
         new webpack.DefinePlugin({
           'process.env': {
             NODE_ENV: JSON.stringify('production')
           }
         }),
+
+        new ExtractTextPlugin('[name].css')
     ]
 });
