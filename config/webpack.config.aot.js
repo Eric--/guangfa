@@ -13,17 +13,9 @@ if(process.env.NODE_ABS){//设置打包路径
     relPath = '';publicPath = '/';
 }
 
-
 module.exports = webpackMerge(commonConfig, {
 
     devtool: 'cheap-module-source-map',
-
-    //页面入口文件配置
-    entry: {
-        app: helpers.root('src', 'app/app.aot.ts'),
-        vendor: helpers.root('src', 'js/vendor.ts'),
-        polyfills: helpers.root('src', 'js/polyfills.ts')
-    },
 
     output: {
       path: helpers.root('dist'),// path+filename js package path

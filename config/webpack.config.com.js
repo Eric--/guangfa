@@ -15,6 +15,13 @@ let postcssSpritesCfg = require('./postcss.config');
 
 module.exports = {
 
+    //页面入口文件配置
+    entry: {
+        app: helpers.root('src', 'app/app.aot.ts'),
+        vendor: helpers.root('src', 'js/vendor.ts'),
+        polyfills: helpers.root('src', 'js/polyfills.ts')
+    },
+
     module: {
         //加载器配置
         rules: [
