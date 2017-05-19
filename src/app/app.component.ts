@@ -1,5 +1,5 @@
 
-import { Component, OnInit, OnChanges} from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 
 import { CookieService } from './service/cookie.service'; 
 
@@ -51,6 +51,8 @@ export class AppComponent implements OnInit, OnChanges{
 		}
 	}
 
-	ngOnChanges() {
+	ngOnChanges(changes: SimpleChanges) {
+		console.log(changes);
+		console.log('changes');
 	}
 }

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChanges, 
+	AfterViewChecked, AfterViewInit, AfterContentChecked, AfterContentInit} from '@angular/core';
 import { Headers, Http, RequestOptions, RequestOptionsArgs, URLSearchParams } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
@@ -9,7 +10,7 @@ import 'rxjs/add/operator/toPromise';
 	styleUrls: ['./login.popup.com.css']
 })
 
-export class LoginPopupComponent implements OnInit{
+export class LoginPopupComponent implements OnInit, OnChanges, AfterViewChecked, AfterViewInit{
 
 	@Input() show:boolean;
 	@Output() postMessage:EventEmitter<object> = new EventEmitter();
@@ -60,6 +61,36 @@ export class LoginPopupComponent implements OnInit{
 	}
 
 	ngOnInit(){
+		console.log('ngOnInit1');
+	}
+
+	ngOnChanges(changes: SimpleChanges){
+		console.log(changes);
+		console.log('sichanges');
+	}
+
+	ngDoCheck(){
+		console.log('ngDoCheck');
+	}
+
+	ngAfterContentInit(){
+		console.log('ngAfterContentInit');
+	}
+
+	ngAfterContentChecked(){
+		console.log('ngAfterContentChecked');
+	}
+
+	ngAfterViewInit(){
+		console.log('ngAfterViewInit');
+	}
+
+	ngAfterViewChecked(){
+		console.log('ngAfterViewChecked');
+	}
+
+	ngOnDestroy(){
+		console.log('ngOnDestroy');
 	}
 
 	handleError(error: any){
